@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flintstones Bedrock City — Kelowna, BC | A Tribute</title>
+<meta name="description" content="A tribute to Flintstones Bedrock City — the Flintstones-themed amusement park on Highway 97N at McCurdy Road, Kelowna, BC (1968–1998).">
+<style>
+  :root{
+    /* Bedrock palette: sandstone, Fred's orange tunic, stone grey */
+    --sand:#F6EBCE; --sand2:#EFE0B8;
+    --orange:#E8622C; --orange2:#C9501D;
+    --ink:#33291F; --muted:#6F604C; --card:#FFFDF6; --line:#E3CF9F;
+    --stone:#8A7B66; --green:#5F7A3E;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--sand);color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif;line-height:1.65;font-size:17px}
+  header.site{position:sticky;top:0;z-index:10;background:var(--ink);color:#fff;
+    display:flex;align-items:center;gap:1rem;padding:.5rem 1.25rem}
+  header.site .brand{display:flex;align-items:center;gap:.6rem;font-size:1.05rem;
+    letter-spacing:.05em;font-weight:bold;white-space:nowrap}
+  header.site .brand .yabba{color:var(--orange)}
+  header.site .brand small{font-weight:normal;color:#CDBFA8;font-size:.75rem}
+  nav{margin-left:auto;display:flex;gap:1rem;flex-wrap:wrap}
+  nav a{color:#fff;text-decoration:none;font-family:Verdana,Arial,sans-serif;
+    font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+  nav a:hover{text-decoration:underline}
+  .hero{background:linear-gradient(180deg,#7A4A1E 0%,var(--orange2) 60%,var(--orange) 100%);color:#fff;
+    padding:3rem 1.5rem 3.5rem;text-align:center}
+  .hero .years{display:inline-block;margin-bottom:1rem;border:1px solid #ffffff55;
+    padding:.35rem 1.1rem;border-radius:999px;font-family:Verdana,Arial,sans-serif;
+    font-size:.8rem;letter-spacing:.18em;color:#FFF3DE}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.6rem);margin:.2em 0;letter-spacing:.02em}
+  .hero h1 .fb{color:#FFE3B3}
+  .hero p.tag{font-size:1.15rem;color:#FFF3DE;max-width:42rem;margin:0 auto}
+  main{max-width:46rem;margin:0 auto;padding:0 1.25rem 3rem}
+  section{padding:2.5rem 0;border-bottom:2px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  h2{font-size:1.7rem;margin:0 0 1rem;color:var(--orange2);border-left:.35rem solid var(--orange);
+    padding-left:.8rem}
+  h2 .num{color:var(--stone);font-size:1rem;font-family:Verdana,Arial,sans-serif;
+    letter-spacing:.15em;display:block;margin-bottom:.4rem}
+  h3{font-size:1.2rem;margin:1.75rem 0 .5rem;color:var(--orange2)}
+  p{margin:0 0 1.1rem}
+  .facts{background:var(--card);border:1px solid var(--line);border-left:.35rem solid var(--orange);
+    border-radius:0 .5rem .5rem 0;padding:1.25rem 1.5rem;margin:1.5rem 0;
+    font-family:Verdana,Arial,sans-serif;font-size:.92rem}
+  .facts dt{font-weight:bold;color:var(--orange2);margin-top:.55rem}
+  .facts dt:first-child{margin-top:0}
+  .facts dd{margin:0;color:var(--muted)}
+  blockquote{border-left:4px solid var(--orange);margin:1.75rem 0;padding:.5rem 1.25rem;
+    font-style:italic;background:var(--card);border-radius:0 .4rem .4rem 0}
+  blockquote .src{display:block;margin-top:.5rem;font-style:normal;font-size:.85rem;color:var(--muted);
+    font-family:Verdana,Arial,sans-serif}
+  ul.products{list-style:none;padding:0;display:grid;gap:.6rem;margin:1.25rem 0}
+  ul.products li{background:var(--card);border:1px solid var(--line);border-radius:.4rem;
+    padding:.7rem 1rem;font-family:Verdana,Arial,sans-serif;font-size:.93rem}
+  ul.products li b{color:var(--orange2)}
+  .timeline{list-style:none;padding:0;margin:1.25rem 0}
+  .timeline li{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:.7rem 0;
+    border-bottom:1px dashed var(--line);font-family:Verdana,Arial,sans-serif;font-size:.92rem}
+  .timeline li:last-child{border-bottom:0}
+  .timeline .yr{font-weight:bold;color:var(--orange2);white-space:nowrap}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(13rem,1fr));gap:.9rem;margin:1.25rem 0}
+  .gallery figure{margin:0;background:var(--card);border:1px solid var(--line);
+    border-radius:.4rem;overflow:hidden}
+  .gallery img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;background:#efe0b8}
+  .gallery figcaption{padding:.6rem .8rem;font-family:Verdana,Arial,sans-serif;
+    font-size:.78rem;color:var(--muted)}
+  .sources{font-family:Verdana,Arial,sans-serif;font-size:.85rem;color:var(--muted)}
+  .sources li{margin-bottom:.45rem}
+  form.contact{background:var(--ink);color:#efe6d4;border-radius:.6rem;
+    padding:2rem 1.75rem;margin-top:1.5rem;font-family:Verdana,Arial,sans-serif}
+  form.contact h3{color:#fff;margin-top:0}
+  form.contact label{display:block;font-size:.82rem;letter-spacing:.06em;
+    text-transform:uppercase;margin:1rem 0 .3rem;color:#d8cdb6}
+  form.contact input,form.contact textarea{width:100%;padding:.65rem .8rem;border:0;
+    border-radius:.35rem;font-size:1rem;font-family:Verdana,Arial,sans-serif}
+  form.contact textarea{min-height:8rem;resize:vertical}
+  form.contact button{margin-top:1.25rem;background:var(--orange);color:#fff;border:0;
+    padding:.8rem 2rem;border-radius:.35rem;font-size:1rem;letter-spacing:.06em;cursor:pointer}
+  form.contact button:hover{background:var(--orange2)}
+  form.contact .note{font-size:.78rem;color:#b3a68c;margin-top:1rem}
+  footer{background:var(--ink);color:#cdbfa8;text-align:center;padding:1.75rem 1rem;
+    font-family:Verdana,Arial,sans-serif;font-size:.8rem}
+  footer .stripe{display:block;height:.35rem;background:var(--orange);margin:-1.75rem -1rem 1.5rem}
+  .visitor-counter{margin-top:1.2rem;text-align:center}
+  .visitor-label{font-family:Verdana,Arial,sans-serif;font-size:.78rem;letter-spacing:.1em;
+    color:#b3a68c;margin:0 0 .4rem;text-transform:uppercase}
+  @media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:.15rem}}
+  @media (max-width:760px){
+    header.site{flex-direction:column;align-items:flex-start;gap:.5rem;padding:.7rem 1rem}
+    nav{margin-left:0;gap:.55rem 1.1rem}
+    nav a{font-size:.72rem}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="brand"><span class="yabba">Yabba Dabba Doo!</span> <small>&middot; Flintstones Bedrock City</small></div>
+  <nav>
+    <a href="#park">The Park</a>
+    <a href="#attractions">Attractions</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#fred">Fred</a>
+    <a href="#souvenirs">Souvenirs</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#sources">Sources</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img class="banner" src="img/fb/fred-sign.jpg" alt="The 40-foot Fred Flintstone entrance sign on Highway 97 at McCurdy Road, 1990s">
+  <div class="years">KELOWNA, BC &nbsp;&middot;&nbsp; 1968 &ndash; 1998</div>
+  <h1><span class="fb">Flintstones</span><br>Bedrock City</h1>
+  <p class="tag">Thirty years of Stone Age family fun on Highway 97 North at
+  McCurdy Road &mdash; the place where a generation of Okanagan kids met Fred,
+  rode the Lava Creek Waterway, and posed beside a 40-foot Fred Flintstone.</p>
+</div>
+
+<main>
+
+<section id="park">
+  <h2><span class="num">01</span>The Park</h2>
+  <p><b>Flintstones Bedrock City</b> was a licensed Hanna-Barbera theme park in
+  Kelowna, British Columbia &mdash; a full-size, walk-through version of the
+  cartoon town of Bedrock, built for families driving the Okanagan highway.
+  It opened in <b>1968</b> and ran for thirty years, closing in <b>1998</b>.</p>
+  <p>In its 1973 advertising it billed itself as <b>&ldquo;Canada&rsquo;s only
+  Flintstones-themed amusement park&rdquo;</b> &mdash; true at the time, since
+  the sister park near Chilliwack wouldn&rsquo;t open until 1975. Daily hours
+  were 9 a.m. to dusk, and the directions in the ads read like a time capsule:
+  &ldquo;HIGHWAY 97N at McCURDY RD (next turn north of Drive-In Theatre) at
+  Carlton Mobile Homes.&rdquo;</p>
+  <dl class="facts">
+    <dt>Full name</dt><dd>Flintstones Bedrock City</dd>
+    <dt>Location</dt><dd>Highway 97 North at McCurdy Road, Kelowna, BC</dd>
+    <dt>Years</dt><dd>1968 &ndash; 1998</dd>
+    <dt>Hours</dt><dd>9 a.m. to dusk, daily (per the 1973 ad)</dd>
+    <dt>Branding</dt><dd>Licensed by Hanna-Barbera Productions Inc.</dd>
+    <dt>What&rsquo;s there now</dt><dd>The site was demolished and redeveloped &mdash; today it&rsquo;s the Landmark Grand 10 multiplex cinema and the McCurdy Corner Shopping Centre</dd>
+  </dl>
+  <h3>Who built it</h3>
+  <p>The park was built by <b>Bob Ell</b>. The Ell family later built a second
+  Bedrock City near Bridal Falls in 1975 &mdash; the park that would become
+  Dinotown &mdash; with Bob&rsquo;s son <b>Rob Ell</b> running it through the
+  Dinotown years to its 2010 closure. The two BC parks were their own
+  Ell-family operation, separate from the American Bedrock City parks in
+  South Dakota and Arizona.</p>
+  <p>The park sat right on the highway, and its towering Fred Flintstone sign
+  was a landmark for northbound drivers for decades &mdash; a 1990s photo
+  taken from a car on Highway 97 shows the 40-foot Fred still standing by
+  McCurdy Road, with the Wild Waters water-slide complex beside it.</p>
+</section>
+
+<section id="attractions">
+  <h2><span class="num">02</span>The Attractions</h2>
+  <p>The 1973 ad promised &ldquo;ACRES and ACRES OF FAMILY FUN,&rdquo; and the
+  fine print reads like a checklist of everything a kid in the seventies could
+  want:</p>
+  <ul class="products">
+    <li><b>Walk-through cartoon environment</b> &mdash; the town of Bedrock rebuilt in full size, with stone-age homes to explore</li>
+    <li><b>Replica Flintmobile cars</b> &mdash; Fred&rsquo;s foot-powered log car, ready for photos</li>
+    <li><b>Fountains, slides, volcanoes and waterfalls</b> &mdash; the prehistoric landscape, built for climbing and cooling off</li>
+    <li><b>Free log-boat rides on the Lava Creek Waterway</b> &mdash; the park&rsquo;s own little river ride</li>
+    <li><b>18-hole mini-golf</b> &mdash; a full miniature course on site</li>
+    <li><b>Nightly outdoor movies at the Rockmore Theatre</b> &mdash; films under the Okanagan sky</li>
+    <li><b>&ldquo;Bedrock Radio&rdquo; station</b> &mdash; the park&rsquo;s own station</li>
+    <li><b>Air-conditioned gift shop</b> &mdash; souvenirs to take home</li>
+    <li><b>Shaded picnic tables and two food stands</b> &mdash; fuel for the family</li>
+  </ul>
+  <p>Later years added their own landmarks: a giant purple <b>Dino</b> statue
+  that kids posed with through the eighties, costumed characters roaming the
+  grounds, and the water slides of the neighbouring Wild Waters complex going
+  up next door in 1980.</p>
+</section>
+
+<section id="timeline">
+  <h2><span class="num">03</span>Timeline</h2>
+  <ul class="timeline">
+    <li><span class="yr">1968</span><span>Flintstones Bedrock City opens on Highway 97N at McCurdy Road, Kelowna</span></li>
+    <li><span class="yr">1973</span><span>Billed in newspaper ads as &ldquo;Canada&rsquo;s only Flintstones-themed amusement park&rdquo; &mdash; &ldquo;ACRES and ACRES OF FAMILY FUN,&rdquo; &copy; Hanna-Barbera Productions Inc.</span></li>
+    <li><span class="yr">1975</span><span>The Ell family builds a second Bedrock City near Bridal Falls, BC (it would later become Dinotown)</span></li>
+    <li><span class="yr">Late 1970s</span><span>Photos capture the fa&ccedil;ade of Fred Flintstone&rsquo;s stone house and his parked car</span></li>
+    <li><span class="yr">1980</span><span>Home-movie footage shows the park in full swing &mdash; with water slides being built next door</span></li>
+    <li><span class="yr">1987</span><span>A visitor poses beside the big purple Dino statue &mdash; likely his only visit, decades later shared as a &lsquo;back to the &rsquo;80s&rsquo; memory</span></li>
+    <li><span class="yr">1990s</span><span>The 40-foot Fred Flintstone entrance sign still towers over Highway 97 at McCurdy Road</span></li>
+    <li><span class="yr">1994</span><span>After Hanna-Barbera is sold to Warner Bros., the Flintstones likeness contract is cancelled &mdash; the Bridal Falls park reopens with non-licensed theming as Dinotown in 1995</span></li>
+    <li><span class="yr">1998</span><span>Kelowna&rsquo;s own license lapses and Bedrock City closes for good after thirty years; demolition begins soon after</span></li>
+    <li><span class="yr">After</span><span>The park is demolished; the land becomes the Landmark Grand 10 multiplex cinema and McCurdy Corner Shopping Centre, while Freddy&rsquo;s Brewpub and the McCurdy Bowling Centre operate on the historic site from 2001</span></li>
+  </ul>
+  <h3>Why it closed</h3>
+  <p>The end wasn&rsquo;t about crowds &mdash; it was about paperwork. Through
+  the 1980s and &rsquo;90s the licensing for Hanna-Barbera&rsquo;s characters
+  changed hands again and again before landing with Time Warner, and when the
+  Kelowna park&rsquo;s license came up in 1998 it wasn&rsquo;t renewed. The
+  Chilliwack park survived by dropping the Flintstones theme and continuing as
+  Dinotown; Kelowna&rsquo;s park simply closed, and the buildings came down.</p>
+</section>
+
+<section id="fred">
+  <h2><span class="num">04</span>Where Is Fred Now?</h2>
+  <p>Every comment thread about Bedrock City eventually asks the same question:
+  what happened to the giant Fred? Local legend says someone hauled the massive
+  Fred statue away and it&rsquo;s lying in a field somewhere out by the Kelowna
+  airport. Nobody&rsquo;s produced a photo &mdash; but nobody&rsquo;s disproven
+  it either, and the rumour has outlived the park by nearly thirty years.</p>
+  <p>And Fred was a landmark in more ways than one: the founder reportedly
+  classified the 40-foot plywood Fred as a &ldquo;lawn ornament&rdquo; to get
+  around signage restrictions &mdash; per a founder&rsquo;s-family interview
+  cited by GoKanagan.</p>
+  <blockquote>
+    &ldquo;Rumour has it that someone took the massive Fred statue and it&rsquo;s
+    lying in a crop somewhere by the Kelowna airport.&rdquo;
+    <span class="src">&mdash; from the description of 1980 home-movie footage of the park</span>
+  </blockquote>
+  <p>If you know where Fred ended up &mdash; or you&rsquo;re the one who moved
+  him &mdash; the contact form at the bottom of this page is waiting.</p>
+</section>
+
+<section id="souvenirs">
+  <h2><span class="num">05</span>Souvenirs</h2>
+  <p>The park is gone, but its paper trail survives. Bedrock City Kelowna
+  memorabilia still turns up in collections and online auctions:</p>
+  <ul class="products">
+    <li><b>Postcards</b> &mdash; including a 1970s card showing kids posing with costumed Dino, Yogi Bear and a hippo against the park&rsquo;s rock walls</li>
+    <li><b>Pennants</b> &mdash; felt &ldquo;Bedrock City, Kelowna B.C.&rdquo; banners from 1973 and 1975</li>
+    <li><b>Tableware</b> &mdash; salt &amp; pepper shaker sets, plates and &ldquo;Cactus Juice&rdquo; glasses</li>
+    <li><b>Ephemera</b> &mdash; a 1973 plastic shopping bag, frosted souvenir glasses, &ldquo;Yabba Dabba Doo&rdquo; buttons</li>
+  </ul>
+  <p>If you&rsquo;ve got a Bedrock City souvenir with a story attached, it
+  belongs here &mdash; send it in below.</p>
+</section>
+
+<section id="gallery">
+  <h2><span class="num">06</span>Gallery</h2>
+  <p>What survives in pictures &mdash; shared with thanks from the
+  <b>Old Kelowna</b> community history page and the folks who took them. The
+  July 1986 set comes from Brent Silk&rsquo;s family trip &mdash; fourteen
+  photos of the park in its prime. More to come as people dig through their
+  photo boxes.</p>
+  <div class="gallery">
+    <figure>
+      <img src="img/fb/ad-1973.jpg" alt="1973 newspaper ad for Bedrock City: Acres and acres of family fun">
+      <figcaption>The 1973 ad &mdash; &ldquo;ACRES and ACRES OF FAMILY FUN.&rdquo; Via Old Kelowna; original image credited to Herb Tanaka.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/freds-home.jpg" alt="Fred Flintstone's stone house and car at Bedrock City, late 1970s">
+      <figcaption>Fred&rsquo;s house and his car, late 1970s. Via Old Kelowna; photo by Barbara Kemp.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/fred-sign.jpg" alt="The 40-foot Fred Flintstone entrance sign on Highway 97, 1990s">
+      <figcaption>The 40-foot Fred sign on Highway 97 at McCurdy Road, 1990s. Via Old Kelowna; photo by Sharline Konkin.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/dino-1987.jpg" alt="A visitor posing beside the large purple Dino statue, 1987">
+      <figcaption>Beside the purple Dino, 1987. Via The News Leader.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/bedrock-wildwaters-early80s.jpg" alt="Bedrock City in the early 1980s with the Wild Waters slides going up behind it">
+      <figcaption>Bedrock City, early 1980s &mdash; the Wild Waters slides going up next door. Via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-entrance.jpg" alt="Two children at the Yaba-Daba-Do You're Here entrance sign, 1986">
+      <figcaption>&ldquo;YABA-DABA-DO YOU&rsquo;RE HERE&rdquo; &mdash; July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-fred-character.jpg" alt="A child posing with a Fred Flintstone costumed character, 1986">
+      <figcaption>Meeting Fred himself, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-fred-barney.jpg" alt="Two children with Fred Flintstone and Barney Rubble characters, 1986">
+      <figcaption>Fred and Barney with two young visitors, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-dino-pool.jpg" alt="Dino the dinosaur statue in a pool, 1986">
+      <figcaption>Dino in his pool, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-red-car.jpg" alt="Two children in a red Flintstones car prop, 1986">
+      <figcaption>Taking the red Flintstones car for a spin, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-pebbles-volcano.jpg" alt="Pebbles Flintstone fishing statue beside a pink volcano in a pond, 1986">
+      <figcaption>Pebbles fishing by the pink volcano, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-train.jpg" alt="Children aboard the Bedrock Express kiddie train, 1986">
+      <figcaption>All aboard the Bedrock Express, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-cutout.jpg" alt="A child at the Flintstones character cutout photo wall, 1986">
+      <figcaption>The character cutout photo wall, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-whale.jpg" alt="Two children inside the giant whale-mouth attraction, 1986">
+      <figcaption>Inside the whale&rsquo;s mouth, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-cottoncandy.jpg" alt="A child with the Robot cotton candy vending machine, 1986">
+      <figcaption>The Robot cotton candy machine, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-fred-babypuss.jpg" alt="Fred Flintstone and Baby Puss the saber-toothed cat statues, 1986">
+      <figcaption>Fred and Baby Puss among the tropical plants, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-blue-dino.jpg" alt="Two children sitting on a blue dinosaur statue, 1986">
+      <figcaption>Riding the blue dinosaur, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-pencil-car.jpg" alt="Two children on a pencil-shaped car ride by the stone service station, 1986">
+      <figcaption>The pencil car by the stone service station, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brent-silk-1986-train-picnic.jpg" alt="The Bedrock Express train passing behind a red picnic table, 1986">
+      <figcaption>The Bedrock Express rolling past the picnic tables, July 1986. Brent Silk, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/brontosaurus-climb-1970s.jpg" alt="Children climbing a green spotted brontosaurus statue in the 1970s">
+      <figcaption>Climbing the brontosaurus, 1970s. Nancy Dreger-Brown, via Old Kelowna.</figcaption>
+    </figure>
+    <figure>
+      <img src="img/fb/bedrock-collage.jpg" alt="Collage of Bedrock City photos: the Bedrock Jail, costumed characters, the train and a dinosaur structure">
+      <figcaption>Bedrock Jail, the characters, the train and the big yellow dinosaur &mdash; a Bedrock City collage. Via Old Kelowna.</figcaption>
+    </figure>
+  </div>
+  <h3>On video</h3>
+  <ul class="products">
+    <li><b>Summer 1980</b> &mdash; home-movie footage of the park, with the water slides being built next door (<a href="https://www.youtube.com/watch?v=ov0OJbiMaAg">YouTube</a>)</li>
+    <li><b>1978</b> &mdash; restored 8mm home movies of Kelowna&rsquo;s Bedrock City (<a href="https://www.youtube.com/watch?v=DWKudThe8RQ">YouTube</a>)</li>
+  </ul>
+</section>
+
+<section id="sources">
+  <h2><span class="num">07</span>Sources</h2>
+  <ul class="sources">
+    <li>Old Kelowna community history page (Facebook) &mdash; 1973 newspaper ad (original image credited to Herb Tanaka), late-1970s Fred&rsquo;s house photo (Barbara Kemp), 1990s Fred sign photo (Sharline Konkin); park dates 1968&ndash;1998; closure tied to Hanna-Barbera licensing complications</li>
+    <li>The News Leader (Facebook) &mdash; 1987 photo beside the purple Dino statue; commenter recall of working at the park 1979&ndash;1980 and the 40-foot Fred statue</li>
+    <li>Ephemera collectors&rsquo; groups (Facebook) &mdash; 1970s Bedrock City Kelowna souvenir postcard with costumed characters</li>
+    <li>YouTube &mdash; &ldquo;Abandoned theme park: Flintstone&rsquo;s Bedrock City in Kelowna, British Columbia circa 1980&rdquo; (1980 footage; Fred-statue airport rumour); &ldquo;Flinstones Bedrock City 1978&rdquo; (8mm home movies; licensing note)</li>
+    <li>The Flintstones Wiki (Fandom) &mdash; the two Canadian Bedrock Cities; Kelowna closed 1998, demolished, replaced by the Landmark Grand 10 multiplex and strip mall; licensing changed hands repeatedly in the &rsquo;80s and &rsquo;90s</li>
+    <li>Ontario Bakery (Kelowna local history) &mdash; open 1968&ndash;1998; Highway 97N and McCurdy Road; became McCurdy Corner Shopping Centre</li>
+    <li>Black Press archives &mdash; Burnaby Now, Aug 27, 2010 (&ldquo;City in talks with Dinotown&rdquo;): the Bridal Falls Bedrock City was launched in 1975 by Bob Ell; the 1994 Hanna-Barbera/Warner Bros. likeness contract cancellation &mdash; and the Agassiz-Harrison Observer, June 25, 2020: the Ell family &ldquo;had already built a Flintstones theme park in Kelowna&rdquo;</li>
+    <li>GoKanagan, Sept 18, 2026 (&ldquo;17 Okanagan Memories from the &rsquo;80s &amp; &rsquo;90s&rdquo;) &mdash; the 40-foot plywood Fred, the train, boat ride and mini-golf; the &ldquo;lawn ornament&rdquo; story from a founder&rsquo;s-family interview</li>
+    <li>RoadsideAmerica.com visitor tips &mdash; demolition beginning in 1998; the park&rsquo;s man-made hill</li>
+    <li>okanaganco.ca &mdash; Freddy&rsquo;s Brewpub and the McCurdy Bowling Centre on the historic Bedrock City site since 2001</li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2><span class="num">08</span>Say Hello</h2>
+  <p>Visited Bedrock City as a kid? Worked there? Know where Fred ended up, or
+  have photos and souvenirs to share? Drop a line below &mdash; messages come
+  straight to the site&rsquo;s keeper.</p>
+
+  <!--
+    CONTACT FORM: wired to Dave's reusable Formspree endpoint
+    (https://formspree.io/f/mdeaojky), same as his other tribute sites.
+    Fields: name, _replyto, message, _subject.
+  -->
+  <form class="contact" action="https://formspree.io/f/mdeaojky" method="POST">
+    <h3>Contact</h3>
+    <input type="hidden" name="_subject" value="New message from the Flintstones Bedrock City tribute site">
+    <label for="c-name">Your name</label>
+    <input id="c-name" name="name" type="text" required autocomplete="name">
+    <label for="c-email">Your email</label>
+    <input id="c-email" name="_replyto" type="email" required autocomplete="email">
+    <label for="c-msg">Message</label>
+    <textarea id="c-msg" name="message" required></textarea>
+    <button type="submit">Send message</button>
+    <p class="note">Your email stays private &mdash; it&rsquo;s only used so a reply is possible.</p>
+  </form>
+</section>
+
+</main>
+
+<footer>
+  <span class="stripe"></span>
+  A fan-made tribute to Flintstones Bedrock City, Kelowna, BC (1968&ndash;1998).<br>
+  Yabba dabba doo.
+  <div class="visitor-counter">
+    <p class="visitor-label">Visitors</p>
+    <!-- hitwebcounter Code START -->
+    <a href="https://www.hitwebcounter.com/" target="_blank" rel="noopener"><img src="https://www.hitwebcounter.com/counter/counter.php?page=21523104&style=0018&nbdigits=5&type=page" alt="Visitor counter" decoding="async" style="border:0;max-width:100%;height:auto;" /></a>
+    <!-- hitwebcounter Code END -->
+  </div>
+</footer>
+
+</body>
+</html>
